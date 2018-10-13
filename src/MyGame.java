@@ -10,7 +10,6 @@ public class MyGame extends Game {
 
     Ball ball;
     Paddle paddle;
-//    Brick brick;
     Vector<Brick> bricks;
 
     public static void main(String args[]) {
@@ -25,7 +24,6 @@ public class MyGame extends Game {
         int radius = 20;
         ball = new Ball(getWidth() / 2, 2.5f * radius + 80, 200, 200, radius, new Color(0x339DB9));
         paddle = new Paddle();
-//        brick =        new Brick();
 
         bricks = new Vector<>();
 
@@ -36,24 +34,7 @@ public class MyGame extends Game {
                 bricks.add(new Brick(x, y));
             }
         }
-
-//        Brick b = new Brick(300, 300);
-//        bricks.add(new Brick(250,250));
-//        bricks.add(new Brick(150,150));
-//        bricks.add(b);
     }
-
-
-//    @Override
-//    protected void init() {
-//        ball = new Ball[10];
-//        int radius  = 20;
-//        for (int i = 0; i < ball.length; i=i+1 ) {
-//            Ball ball = new Ball(getWidth() / 2, i * 2.5f * radius + 80, 10 + i * 300 / ball.length, 50, radius);
-//            ball[i] = ball;
-//        }
-//        ballStroke = new BasicStroke(3);
-//    }
 
     /**
      * render the game  (override/replace)
@@ -66,7 +47,6 @@ public class MyGame extends Game {
         g.clearRect(0, 0, getWidth(), getHeight());
         ball.draw(g);
         paddle.draw(g);
-//        brick.draw(g);
         for (int i = 0; i < bricks.size(); i++) {
             bricks.get(i).draw(g);
         }
